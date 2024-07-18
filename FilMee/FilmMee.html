@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="navbar">
+    <div class="buttons">
+        <button onclick="goToMain()">MAIN</button>
+        <button onclick="goToActors()">ACTORS</button>
+        <button onclick="goToWhatToWatch()">What To Watch</button>
+        <button onclick="goToCalendar()">CALENDAR</button>
+        <button onclick="goToAbout()">ABOUT</button>
+    </div>
+    <div class="search-container">
+        <form id="search-form">
+            <input type="text" id="movie-title" placeholder="Enter movie title" required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+<div class="movie-list" id="movies"></div>
+<div class="top-20" id="top-20-text" style="display:none;">T o p  < 2 0 >   t h i s  y e a r</div>
+
+<div id="movie-details" class="modal">
+    <div class="modal-content"></div>
+</div>
+
+<div id="random-movie-generator" style="display:none;">
+    <button onclick="getRandomMovie()">Generate Random Movie</button>
+    <br><br>
+    <label>
+        <input type="checkbox" id="allow-susy-content">
+        Allow Sussy Content?
+    </label>
+
+    <div id="movie-info">
+        <h2 id="random-movie-title"></h2>
+        <img id="poster" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1024px-HD_transparent_picture.png" alt="Movie Poster">
+    </div>
+</div>
+
+
+<div id="about-section" style="display:none;">
+    <div class="about-content" onclick="openVideo()">
+        <p>This page is writen by @kit_ma<br>Using API "The Movie Database"</p>
+        <p class="year">2024</p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
