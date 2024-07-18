@@ -1,4 +1,4 @@
-const apiKey = 'YOUR_API_HERE'; // <----------------------------- API ключ
+const apiKey = 'YOUR_API_HERE'; // <----------------------------- API key
 let currentPage = 1;
 let currentTitle = '';
 let totalPages = 0;
