@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milky Silky Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #faf8f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff8e1;
+            color: #5d4037;
+            text-align: left;
+
+            padding: 20px 100px;
+            font-size: 3.5em;
+            font-weight: bold;
+
+        }
+
+        nav {
+            background-color: #f3e5f5;
+            padding: 15px;
+            border: 1px solid rgba(93, 64, 55, 0.27);
+            text-align: left;
+        }
+
+        nav button {
+            background-color: #eddbdb;
+            color: #77554b;
+            border: none;
+            height: 40px;
+
+            margin-left: 30px;
+
+            font-size: 1em;
+            width: 210px;
+
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.09) 0px 3px 6px;
+
+            transition: transform 0.2s ease, background-color 1s ease;
+        }
+
+        nav button:active {
+            transform: scale(1.1);
+        }
+
+        nav button:hover {
+            background-color: #bbdefb;
+        }
+
+        .banner {
+            position: relative;
+            background-color: #c2e9f6;
+            height: 705px;
+            overflow: hidden;
+        }
+
+        footer {
+            background-color: #ede7f6;
+            color: #616161;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .pane {
+            position: absolute;
+            top: 0;
+            left: -340px;
+            width: 300px;
+            height: 100%;
+            background-color: #d1c4e9;
+            transition: left 0.3s ease;
+            padding: 20px;
+
+            box-shadow: 3px 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .toggle-btn {
+            position: absolute;
+            top: 0;
+            right: -30px;
+            width: 30px;
+            height: 100%;
+            background-color: #bbdefb;
+            border: 1px solid rgba(93, 64, 55, 0.27);
+            color: #5d4037;
+            cursor: pointer;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 0 5px 5px 0;
+            box-shadow: 3px 0 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.5s ease;
+        }
+        .toggle-btn:hover{
+            background-color: #a1cef3;
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(177, 158, 158, 0.48);
+            border-radius: 10px;
+            border: 2px solid #b1b1b1;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dda5a5;
+        }
+
+
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 2.5em;
+                padding: 20px 50px;
+                text-align: center;
+            }
+
+            nav button {
+                width: 30%;
+                margin: 5px 5px;
+            }
+
+            .banner {
+                height: 500px;
+            }
+
+            footer {
+                padding: 15px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1.8em;
+                padding: 15px 20px;
+                text-align: center;
+            }
+
+
+            nav button {
+                font-size: 0.9em;
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            footer {
+                font-size: 0.8em;
+                padding: 10px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    Milky Silky Site
+</header>
+
+
+<nav>
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+    <button>Button 4</button>
+    <button>Button 5</button>
+    <button>Button 6</button>
+</nav>
+
+<div class="banner">
+    <div id="pane" class="pane">
+        <h3>Side Pane</h3>
+        <p>Content goes here...</p>
+        <button class="toggle-btn" onclick="togglePane()">&#9776;</button>
+    </div>
+</div>
+
+<footer>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</footer>
+
+<script>
+    function togglePane() {
+        var pane = document.getElementById("pane");
+        if (pane.style.left === "0px") {
+            pane.style.left = "-340px";
+        } else {
+            pane.style.left = "0px";
+        }
+    }
+</script>
+
+</body>
+</html>
